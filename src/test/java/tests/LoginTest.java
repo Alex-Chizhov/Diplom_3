@@ -27,7 +27,7 @@ public class LoginTest extends BaseTest {
         app.mainPage.open();
         app.mainPage.clickLoginButton();
         app.loginPage.fillLoginForm(user);
-        app.mainPage.makeOrderButton().shouldBe(visible);
+        app.mainPage.getMakeOrderButton().shouldBe(visible);
     }
 
     @Test
@@ -36,7 +36,7 @@ public class LoginTest extends BaseTest {
         app.mainPage.open();
         app.headerPage.clickPersonalArea();
         app.loginPage.fillLoginForm(user);
-        app.mainPage.makeOrderButton().shouldBe(visible);
+        app.mainPage.getMakeOrderButton().shouldBe(visible);
     }
 
     @Test
@@ -45,7 +45,7 @@ public class LoginTest extends BaseTest {
         app.forgotPasswordPage.open();
         app.forgotPasswordPage.clickLoginButton();
         app.loginPage.fillLoginForm(user);
-        app.mainPage.makeOrderButton().shouldBe(visible);
+        app.mainPage.getMakeOrderButton().shouldBe(visible);
     }
 
     @Test
@@ -54,7 +54,7 @@ public class LoginTest extends BaseTest {
         app.registrationPage.open();
         app.registrationPage.clickLoginButton();
         app.loginPage.fillLoginForm(user);
-        app.mainPage.makeOrderButton().shouldBe(visible);
+        app.mainPage.getMakeOrderButton().shouldBe(visible);
     }
 
     @AfterEach

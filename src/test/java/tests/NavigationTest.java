@@ -21,7 +21,7 @@ public class NavigationTest extends BaseTest{
         app.registrationPage.fillRegistrationForm(user);
         app.loginPage.getH2Enter().shouldBe(visible);
         app.loginPage.fillLoginForm(user);
-        app.mainPage.makeOrderButton().shouldBe(exist);
+        app.mainPage.getMakeOrderButton().shouldBe(exist);
 
     }
 
@@ -38,7 +38,7 @@ public class NavigationTest extends BaseTest{
         app.headerPage.clickPersonalArea();
         app.profilePage.getProfileLink().shouldBe(visible);
         app.headerPage.clickConstructor();
-        app.mainPage.makeOrderButton().shouldBe(visible);
+        app.mainPage.getMakeOrderButton().shouldBe(visible);
     }
 
     @Test
@@ -47,7 +47,7 @@ public class NavigationTest extends BaseTest{
         app.headerPage.clickPersonalArea();
         app.profilePage.getProfileLink().shouldBe(visible);
         app.headerPage.clickLogo();
-        app.mainPage.makeOrderButton().shouldBe(visible);
+        app.mainPage.getMakeOrderButton().shouldBe(visible);
     }
 
     @AfterEach

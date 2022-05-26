@@ -24,7 +24,7 @@ public class MainPage {
     }
 
     @Step("Get make order button")
-    public SelenideElement makeOrderButton(){
+    public SelenideElement getMakeOrderButton(){
         return this.makeOrderButton;
     }
 

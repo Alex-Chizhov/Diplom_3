@@ -20,7 +20,7 @@ public class LogoutTest extends BaseTest{
         app.registrationPage.fillRegistrationForm(user);
         app.loginPage.getH2Enter().shouldBe(visible);
         app.loginPage.fillLoginForm(user);
-        app.mainPage.makeOrderButton().shouldBe(visible);
+        app.mainPage.getMakeOrderButton().shouldBe(visible);
 
     }
 
