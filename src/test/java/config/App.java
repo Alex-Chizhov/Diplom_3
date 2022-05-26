@@ -1,6 +1,6 @@
 package config;
 
-import pageObjectModel.*;
+import pom.*;
 import static com.codeborne.selenide.Selenide.page;
 
 

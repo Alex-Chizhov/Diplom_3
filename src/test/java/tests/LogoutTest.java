@@ -18,9 +18,9 @@ public class LogoutTest extends BaseTest{
         user = getGeneratedUser(6, 20);
         app.registrationPage.open();
         app.registrationPage.fillRegistrationForm(user);
-        app.loginPage.h2Enter.shouldBe(visible);
+        app.loginPage.getH2Enter().shouldBe(visible);
         app.loginPage.fillLoginForm(user);
-        app.mainPage.makeOrderButton.shouldBe(visible);
+        app.mainPage.makeOrderButton().shouldBe(visible);
 
     }
 
@@ -29,7 +29,7 @@ public class LogoutTest extends BaseTest{
     public void logoutTest(){
         app.profilePage.open();
         app.profilePage.clickLogOutLink();
-        app.loginPage.buttonEnter.shouldBe(exist);
+        app.loginPage.getButtonEnter().shouldBe(exist);
     }
 
 

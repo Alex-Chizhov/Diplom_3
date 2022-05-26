@@ -1,4 +1,4 @@
-package pageObjectModel;
+package pom;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
@@ -11,14 +11,14 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class ConstructorPage {
 
-    public SelenideElement spanBun = $(byXpath("//span[text()='Булки']"));
-    public SelenideElement spanSauce = $(byXpath("//span[text()='Соусы']"));
-    public SelenideElement spanFilling = $(byXpath("//span[text()='Начинки']"));
-    public ElementsCollection Buns = $$(byXpath("//h2[text()='Булки']/following::ul[1]/a"));
-    public ElementsCollection Sauces = $$(byXpath("//h2[text()='Соусы']/following::ul[1]/a"));
-    public ElementsCollection Fillings = $$(byXpath("//h2[text()='Начинки']/following::ul[1]/a"));
-    public SelenideElement modalCardText = $(byXpath("//div[contains(@class, 'Modal_modal__container__Wo2l_')]//p"));
-    public SelenideElement modalCloseButton = $(byXpath("//div[contains(@class, 'Modal_modal__container__Wo2l_')]//button"));
+    private final SelenideElement spanBun = $(byXpath("//span[text()='Булки']"));
+    private final SelenideElement spanSauce = $(byXpath("//span[text()='Соусы']"));
+    private final SelenideElement spanFilling = $(byXpath("//span[text()='Начинки']"));
+    private final ElementsCollection Buns = $$(byXpath("//h2[text()='Булки']/following::ul[1]/a"));
+    private final ElementsCollection Sauces = $$(byXpath("//h2[text()='Соусы']/following::ul[1]/a"));
+    private final ElementsCollection Fillings = $$(byXpath("//h2[text()='Начинки']/following::ul[1]/a"));
+    private final SelenideElement modalCardText = $(byXpath("//div[contains(@class, 'Modal_modal__container__Wo2l_')]//p"));
+    private final SelenideElement modalCloseButton = $(byXpath("//div[contains(@class, 'Modal_modal__container__Wo2l_')]//button"));
 
     @Step("Click bun link")
     public void clickSpanBun(){
@@ -54,5 +54,10 @@ public class ConstructorPage {
     public void closeModal(){
         modalCloseButton.shouldBe(visible).click();
         modalCloseButton.shouldBe(disappear);
+    }
+
+    @Step("Get text from model card")
+    public SelenideElement getModalCardText(){
+        return this.modalCardText;
     }
 }

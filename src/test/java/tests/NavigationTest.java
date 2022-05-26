@@ -19,9 +19,9 @@ public class NavigationTest extends BaseTest{
         User user = getGeneratedUser(6, 20);
         app.registrationPage.open();
         app.registrationPage.fillRegistrationForm(user);
-        app.loginPage.h2Enter.shouldBe(visible);
+        app.loginPage.getH2Enter().shouldBe(visible);
         app.loginPage.fillLoginForm(user);
-        app.mainPage.makeOrderButton.shouldBe(exist);
+        app.mainPage.makeOrderButton().shouldBe(exist);
 
     }
 
@@ -29,25 +29,25 @@ public class NavigationTest extends BaseTest{
     @Description ("User registration and login")
     public void goToProfilePageTest(){
         app.headerPage.clickPersonalArea();
-        app.profilePage.profileLink.shouldBe(visible);
+        app.profilePage.getProfileLink().shouldBe(visible);
     }
 
     @Test
     @Description ("Go to constructor from profile page")
     public void goToConstructorFromProfileTest(){
         app.headerPage.clickPersonalArea();
-        app.profilePage.profileLink.shouldBe(visible);
+        app.profilePage.getProfileLink().shouldBe(visible);
         app.headerPage.clickConstructor();
-        app.mainPage.makeOrderButton.shouldBe(visible);
+        app.mainPage.makeOrderButton().shouldBe(visible);
     }
 
     @Test
     @Description ("Go to constructor from profile page by click logo")
     public void goToConstructorFromProfileClickLogoTest(){
         app.headerPage.clickPersonalArea();
-        app.profilePage.profileLink.shouldBe(visible);
+        app.profilePage.getProfileLink().shouldBe(visible);
         app.headerPage.clickLogo();
-        app.mainPage.makeOrderButton.shouldBe(visible);
+        app.mainPage.makeOrderButton().shouldBe(visible);
     }
 
     @AfterEach

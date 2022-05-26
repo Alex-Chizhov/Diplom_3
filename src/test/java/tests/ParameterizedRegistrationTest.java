@@ -16,9 +16,9 @@ public class ParameterizedRegistrationTest extends BaseTest {
     static Stream<Arguments> loginTest() {
         return Stream.of(
                 Arguments.of(
-                        getGeneratedUser(6, 20), app.loginPage.h2Enter),
+                        getGeneratedUser(6, 20), app.loginPage.getH2Enter()),
                 Arguments.of(
-                        getGeneratedUser(1, 5), app.registrationPage.invalidPasswordMessage)
+                        getGeneratedUser(1, 5), app.registrationPage.getInvalidPasswordMessage())
         );
     }
 

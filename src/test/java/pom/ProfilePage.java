@@ -1,4 +1,4 @@
-package pageObjectModel;
+package pom;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
@@ -11,8 +11,8 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class ProfilePage {
 
-    public SelenideElement profileLink = $(byXpath("//a[text()='Профиль']"));
-    public SelenideElement logOutLink = $(byXpath("//button[text()='Выход']"));
+    private final SelenideElement profileLink = $(byXpath("//a[text()='Профиль']"));
+    private final SelenideElement logOutLink = $(byXpath("//button[text()='Выход']"));
 
     @Step("Open profile page")
     public void open(){
@@ -23,5 +23,10 @@ public class ProfilePage {
     public void clickLogOutLink(){
         logOutLink.shouldBe(visible).click();
         logOutLink.shouldBe(disappear);
+    }
+
+    @Step("Get profile link")
+    public SelenideElement getProfileLink(){
+        return this.profileLink;
     }
 }

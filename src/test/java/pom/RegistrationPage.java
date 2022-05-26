@@ -1,4 +1,4 @@
-package pageObjectModel;
+package pom;
 
 import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Condition.*;
@@ -11,12 +11,12 @@ import io.qameta.allure.Step;
 
 public class RegistrationPage {
 
-    public SelenideElement nameInput = $(byXpath("//label[text()='Имя']/following-sibling::input"));
-    public SelenideElement emailInput = $(byXpath("//label[text()='Email']/following-sibling::input"));
-    public SelenideElement passwordInput = $(byXpath("//label[text()='Пароль']/following-sibling::input"));
-    public SelenideElement buttonRegistration = $(byXpath("//button[text()='Зарегистрироваться']"));
-    public SelenideElement invalidPasswordMessage = $(byXpath("//p[text()='Некорректный пароль']"));
-    public SelenideElement loginButton = $(byXpath("//a[@href='/login']"));
+    private final SelenideElement nameInput = $(byXpath("//label[text()='Имя']/following-sibling::input"));
+    private final SelenideElement emailInput = $(byXpath("//label[text()='Email']/following-sibling::input"));
+    private final SelenideElement passwordInput = $(byXpath("//label[text()='Пароль']/following-sibling::input"));
+    private final SelenideElement buttonRegistration = $(byXpath("//button[text()='Зарегистрироваться']"));
+    private final SelenideElement invalidPasswordMessage = $(byXpath("//p[text()='Некорректный пароль']"));
+    private final SelenideElement loginButton = $(byXpath("//a[@href='/login']"));
 
     @Step("Click login link")
     public void open(){
@@ -36,5 +36,10 @@ public class RegistrationPage {
     public void clickLoginButton(){
         loginButton.shouldBe(exist).shouldBe(visible).click();
         loginButton.shouldBe(disappear);
+    }
+
+    @Step("Get invalid password message")
+    public SelenideElement getInvalidPasswordMessage(){
+        return this.invalidPasswordMessage;
     }
 }

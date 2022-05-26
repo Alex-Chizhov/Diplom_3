@@ -20,7 +20,7 @@ public class RegistrationTest extends BaseTest {
     public void loginTest() {
         User user = getGeneratedUser(6, 20);
         app.registrationPage.fillRegistrationForm(user);
-        app.loginPage.h2Enter.shouldBe(visible);
+        app.loginPage.getH2Enter().shouldBe(visible);
     }
 
     @Test
@@ -28,7 +28,7 @@ public class RegistrationTest extends BaseTest {
     public void loginWithInvalidPasswordTest() {
         User user = getGeneratedUser(1, 5);
         app.registrationPage.fillRegistrationForm(user);
-        app.registrationPage.invalidPasswordMessage.shouldBe(visible);
+        app.registrationPage.getInvalidPasswordMessage().shouldBe(visible);
     }
 
 }

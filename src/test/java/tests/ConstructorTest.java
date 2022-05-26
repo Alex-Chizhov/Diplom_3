@@ -19,7 +19,7 @@ public class ConstructorTest extends BaseTest {
     public void transitionToFillingTest() {
         app.constructorPage.clickSpanFilling();
         app.constructorPage.clickFirstFillingCard();
-        app.constructorPage.modalCardText.shouldHave(text("Мясо бессмертных моллюсков Protostomia"));
+        app.constructorPage.getModalCardText().shouldHave(text("Мясо бессмертных моллюсков Protostomia"));
         }
 
     @Test
@@ -27,7 +27,7 @@ public class ConstructorTest extends BaseTest {
     public void transitionToSaucesTest() {
         app.constructorPage.clickSpanSauce();
         app.constructorPage.clickFirstSauceCard();
-        app.constructorPage.modalCardText.shouldHave(text("Соус Spicy-X"));
+        app.constructorPage.getModalCardText().shouldHave(text("Соус Spicy-X"));
 
     }
 
@@ -37,7 +37,7 @@ public class ConstructorTest extends BaseTest {
         app.constructorPage.clickSpanSauce();
         app.constructorPage.clickSpanBun();
         app.constructorPage.clickFirstBunCard();
-        app.constructorPage.modalCardText.shouldHave(text("Флюоресцентная булка R2-D3"));
+        app.constructorPage.getModalCardText().shouldHave(text("Флюоресцентная булка R2-D3"));
     }
 
     @AfterEach

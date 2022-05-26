@@ -1,4 +1,4 @@
-package pageObjectModel;
+package pom;
 
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
@@ -10,9 +10,9 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class HeaderPage {
 
-    public SelenideElement logo = $(byXpath("//div[contains(@class, 'logo')]/a[@href='/']"));
-    public SelenideElement personalArea = $(byXpath("//p[text()='Личный Кабинет']"));
-    public SelenideElement constructor = $(byXpath("//p[text()='Конструктор']"));
+    private final SelenideElement logo = $(byXpath("//div[contains(@class, 'logo')]/a[@href='/']"));
+    private final SelenideElement personalArea = $(byXpath("//p[text()='Личный Кабинет']"));
+    private final SelenideElement constructor = $(byXpath("//p[text()='Конструктор']"));
 
     @Step("Click link personal area")
     public void clickPersonalArea(){

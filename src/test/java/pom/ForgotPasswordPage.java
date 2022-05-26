@@ -1,4 +1,4 @@
-package pageObjectModel;
+package pom;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class ForgotPasswordPage {
 
-    public SelenideElement loginButton = $(byXpath("//a[text()='Войти']"));
+    private final SelenideElement loginButton = $(byXpath("//a[text()='Войти']"));
 
     @Step("Open forgot password page")
     public void open(){
