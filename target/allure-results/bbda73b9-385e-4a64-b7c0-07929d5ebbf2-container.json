@@ -1,0 +1,1 @@
+{"uuid":"bbda73b9-385e-4a64-b7c0-07929d5ebbf2","name":"[2] model.User@34b3127b, NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//p[text()='Некорректный пароль']\"}","children":["d9ec940e-7b7d-4afc-8997-8029b657ace2"],"befores":[],"afters":[],"start":1653460120779,"stop":1653460121496}
