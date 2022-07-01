@@ -14,9 +14,9 @@ public class ConstructorPage {
     private final SelenideElement spanBun = $(byXpath("//span[text()='Булки']"));
     private final SelenideElement spanSauce = $(byXpath("//span[text()='Соусы']"));
     private final SelenideElement spanFilling = $(byXpath("//span[text()='Начинки']"));
-    private final ElementsCollection Buns = $$(byXpath("//h2[text()='Булки']/following::ul[1]/a"));
-    private final ElementsCollection Sauces = $$(byXpath("//h2[text()='Соусы']/following::ul[1]/a"));
-    private final ElementsCollection Fillings = $$(byXpath("//h2[text()='Начинки']/following::ul[1]/a"));
+    private final ElementsCollection buns = $$(byXpath("//h2[text()='Булки']/following::ul[1]/a"));
+    private final ElementsCollection sauces = $$(byXpath("//h2[text()='Соусы']/following::ul[1]/a"));
+    private final ElementsCollection fillings = $$(byXpath("//h2[text()='Начинки']/following::ul[1]/a"));
     private final SelenideElement modalCardText = $(byXpath("//div[contains(@class, 'Modal_modal__container__Wo2l_')]//p"));
     private final SelenideElement modalCloseButton = $(byXpath("//div[contains(@class, 'Modal_modal__container__Wo2l_')]//button"));
 
@@ -37,17 +37,17 @@ public class ConstructorPage {
 
     @Step("Click first bun card")
     public void clickFirstBunCard(){
-        Buns.get(0).shouldBe(visible).click();
+        buns.get(0).shouldBe(visible).click();
     }
 
     @Step("Click first sauce card")
     public void clickFirstSauceCard(){
-        Sauces.get(0).shouldBe(visible).click();
+        sauces.get(0).shouldBe(visible).click();
     }
 
     @Step("Click first filling card")
     public void clickFirstFillingCard(){
-        Fillings.get(0).shouldBe(visible).click();
+        fillings.get(0).shouldBe(visible).click();
     }
 
     @Step("Close modal window")
